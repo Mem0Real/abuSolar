@@ -1,20 +1,16 @@
-/**
- * @type {import('@types/tailwindcss/tailwind-config').TailwindConfig}
- */
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./node_modules/flowbite-react/**/*.js",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       backgroundImage: {
-        heroBg: "url('/images/hero3.jpg')",
-        heroServiceBg: "url('/images/hero2.jpg')",
+        heroBg: "url('/images/hero2.jpg')",
         aboutBg: "url('/images/about2.jpg')",
         projectBg: "url('/images/project.jpg')",
-        productBg: "url('/images/product.png')",
+        productBg: "url('/images/product.jpg')",
         serviceBg: "url('/images/service.jpg')",
       },
       fontFamily: {
@@ -24,7 +20,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require("flowbite/plugin")],
+  plugins: [],
   corePlugins: {
     fontFamily: true,
   },

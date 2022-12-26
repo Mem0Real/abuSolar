@@ -1,90 +1,111 @@
 import Layout from "../components/layout";
 import FastMarquee from "../components/marquee";
-import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <Layout>
-      <main
-        className={`${styles.main} bg-fixed bg-heroBg bg-no-repeat bg-cover bg-center`}
-      >
+      <>
         {/* Hero */}
-        <div className="h-screen relative w-screen">
-          <div
-            className={`absolute inset-x-0 lg:mt-36 h-1/3 font-rubik ${styles.shad} flex flex-col justify-center items-center`}
-          >
-            <h1 className="text-6xl font-bold text-center">Abu Solar Tech</h1>
-            <h1 className="text-4xl lg:mt-6 italic text-center">
+        <div className="h-screen flex flex-col items-center justify-center bg-heroBg bg-top bg-cover bg-fixed">
+          <div className="container text-center">
+            <h2 className="text-4xl md:mt-12 py-5 px-24 backdrop-blur-sm backdrop-saturate-200 rounded-3xl w-fit text-center mx-auto">
+              Welcome To Abu Solar Tech
+            </h2>
+            {/* <h2 className="text-4xl md:mt-40 py-5 px-12 backdrop-blur-xl backdrop-saturate-200 rounded-3xl w-fit text-center mx-auto">
               Providing Reliable Solar Equipments
-            </h1>
+            </h2> */}
           </div>
         </div>
 
-        {/* Deets */}
-        <div className="h-96 w-screen bg-white text-center font-black flex flex-col justify-center items-center border border-x-0 border-y-black border-y-2">
-          <p className="text-4xl text-gray-800">
-            We provide quality solar products at fair prices. Browse through our
-            inventory and take a step towards a better future.
-          </p>
+        {/* Motto */}
+        <div className="h-80 flex flex-col items-center justify-center bg-white border-2 border-x-0 border-black text-black dark-mode:bg-black dark-mode:text-white">
+          <div className="container text-center">
+            <h2 className="text-3xl">
+              We develop and distribute high-quality Solar Equipments across the
+              country.
+            </h2>
+          </div>
         </div>
 
-        {/* Batteries */}
-        <div
-          className="h-fit w-screen bg-fixed bg-transparent bg-no-repeat bg-cover bg-center"
-          id="batteries"
-        >
-          <h3 className="underline text-3xl pl-5">Batteries</h3>
-          <FastMarquee type="batteries" />
+        {/* Projects */}
+        <div className="h-screen flex items-center justify-center md:justify-end bg-projectBg bg-center bg-cover pb-36">
+          <div className="container flex flex-col md:w-1/2 mt-96 md:mt-80 text-center justify-center items-center lg:mr-3">
+            <h1 className="text-2xl md:backdrop-blur-sm backdrop-blur-md bg-black/50 rounded-lg lg:py-12">
+              We strive to eradicate our country's power and water problems by
+              providing a non ending electric supply. Browse our previous
+              projects and see for yourself.
+            </h1>
+            <br />
+            <div className="bg-blue-400 w-fit rounded-xl py-3">
+              <Link
+                className="px-4 py-2 mt-2 font-semibold text-lg bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="/solutions/projects"
+              >
+                Our Projects
+              </Link>
+            </div>
+          </div>
         </div>
 
-        {/* Line Interactive UPS */}
-        <div className="h-fit w-screen bg-gray-800" id="lineIU">
-          <h3 className="underline text-3xl pl-5">Line Interactive UPS</h3>
-          <FastMarquee type="lineIU" />
+        <div className="h-64 flex flex-col items-center justify-center bg-white border-2 border-x-0 border-black text-black dark-mode:bg-black dark-mode:text-white">
+          <div className="container text-center">
+            <h2 className="text-2xl">
+              We pride ourselves with an exceptional customer service!
+            </h2>
+          </div>
         </div>
 
-        {/* Online UPS */}
-        <div className="h-fit w-screen bg-transparent" id="onlineU">
-          <h3 className="underline text-3xl pl-5">Online UPS</h3>
-          <FastMarquee type="onlineU" />
+        {/* Products */}
+        <div className="h-screen flex items-center justify-center md:justify-start bg-productBg bg-center bg-contain bg-white bg-no-repeat pb-36">
+          <div className="container flex flex-col md:w-1/2 mt-80 text-center justify-center items-center">
+            <h1 className="text-2xl md:backdrop-grayscale backdrop-blur-md bg-black/50 rounded-lg lg:py-12 lg:ml-3 ">
+              We provide a multitude of products ranging from simple, handheld
+              and rechargable equipments all the way to massive infrastructures
+              of solar panels and power systems. Take a look to your heart's
+              content.
+            </h1>
+            <br />
+            <div className="bg-blue-400 w-fit rounded-xl py-3">
+              <Link
+                className="px-4 py-2 mt-2 font-semibold text-lg bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="/solutions/products"
+              >
+                Our Products
+              </Link>
+            </div>
+          </div>
         </div>
 
-        {/* Power Inverter */}
-        <div className="h-fit w-screen bg-gray-800" id="powInv">
-          <h3 className="underline text-3xl pl-5">Power Inverter</h3>
-          <FastMarquee type="powInv" />
+        <div className="h-64 flex flex-col items-center justify-center bg-white border-2 border-x-0 border-black text-black dark-mode:bg-black dark-mode:text-white">
+          <div className="container text-center">
+            <h2 className="text-2xl">
+              Dedicating our lives to help those in need brings us great joy!
+            </h2>
+          </div>
         </div>
 
-        {/* Solar Lighting System */}
-        <div className="h-fit w-screen bg-transparent" id="soli">
-          <h3 className="underline text-3xl pl-5">Solar Lighting System</h3>
-          <FastMarquee type="soli" />
+        {/* Services */}
+        <div className="h-screen flex items-center justify-center md:justify-end bg-serviceBg bg-center bg-cover pb-36">
+          <div className="container flex flex-col md:w-1/2 mt-80 text-center justify-center items-center">
+            <h1 className="text-xl md:text-2xl md:backdrop-grayscale backdrop-blur-md bg-black/50 rounded-lg lg:py-12 lg:mr-3 ">
+              We offer a wide range of services including assembly and
+              distribution. We pride ourselves in providing the best customer
+              service so that you don't have to interact with all the nitty
+              gritty details of these amazing products.
+            </h1>
+            <br />
+            <div className="bg-blue-400 w-fit rounded-xl py-3">
+              <Link
+                className="px-5 py-2 mt-2 font-semibold text-lg bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="/solutions/services"
+              >
+                Our Services
+              </Link>
+            </div>
+          </div>
         </div>
-
-        {/* Solar Charge Controller */}
-        <div className="h-fit w-screen bg-gray-800" id="socc">
-          <h3 className="underline text-3xl pl-5">Solar Charge Controller</h3>
-          <FastMarquee type="socc" />
-        </div>
-
-        {/* Solar Inverter */}
-        <div className="h-fit w-screen bg-transparent" id="soInv">
-          <h3 className="underline text-3xl pl-5">Solar Inverter</h3>
-          <FastMarquee type="soInv" />
-        </div>
-
-        {/* Solar Panel */}
-        <div className="h-fit w-screen bg-gray-800" id="sopan">
-          <h3 className="underline text-3xl pl-5">Solar Panel</h3>
-          <FastMarquee type="sopan" />
-        </div>
-
-        {/* Solar Power System */}
-        <div className="h-fit w-screen bg-transparent" id="sops">
-          <h3 className="underline text-3xl pl-5">Solar Power System</h3>
-          <FastMarquee type="sops" />
-        </div>
-      </main>
+      </>
     </Layout>
   );
 }

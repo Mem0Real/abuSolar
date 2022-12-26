@@ -1,11 +1,12 @@
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
+
 import battery1 from "../public/images/battery/battery1.jpg";
 import battery2 from "../public/images/battery/battery2.jpg";
 import battery3 from "../public/images/battery/battery3.jpg";
 import battery4 from "../public/images/battery/battery4.jpg";
 import battery5 from "../public/images/battery/battery5.jpg";
-// import battery6 from "../public/images/battery/battery6.jpg";
+import battery6 from "../public/images/battery/battery6.jpg";
 
 import lineIU1 from "../public/images/lineIU/lineIU1.jpg";
 import lineIU2 from "../public/images/lineIU/lineIU2.jpg";
@@ -63,12 +64,39 @@ import sps4 from "../public/images/sps/sps4.jpg";
 import sps5 from "../public/images/sps/sps5.jpg";
 import sps6 from "../public/images/sps/sps6.jpg";
 
+const marqueeData = [
+  {
+    type: "batteries",
+    alt: "Batteries",
+    models: [
+      { name: "battery1", desc: "Durable Solar Battery" },
+      {
+        name: "battery2",
+        desc: "Mobile Solar Battery with 6hrs storage capacity",
+      },
+      { name: "battery3", desc: "Lightweight Handheld Battery" },
+      {
+        name: "battery4",
+        desc: "Wall Mount, vehicle charger battery with 6hrs storage capacity",
+      },
+      {
+        name: "battery5",
+        desc: "Wall Mount, vehicle charger battery with 12hrs storage capacity",
+      },
+    ],
+  },
+];
+
 export default function FastMarquee({ type }) {
   switch (type) {
     case "batteries":
       return (
-        <Marquee speed="80" gradient={false} className="mt-12 mb-24">
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+        <Marquee
+          speed="80"
+          gradient={false}
+          className="mt-12 mb-24 bg-transparent"
+        >
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={battery1}
@@ -76,11 +104,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               Durable Solar Battery
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={battery2}
@@ -88,11 +116,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               Mobile Solar Battery with 6hrs storage capacity
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5 ">
             <Image
               placeholder="blur"
               src={battery3}
@@ -100,11 +128,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               Lightweight Handheld Battery
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5 ">
             <Image
               placeholder="blur"
               src={battery4}
@@ -112,11 +140,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               Wall Mount, vehicle charger battery with 6hrs storage capacity
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={battery5}
@@ -124,7 +152,7 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               Wall Mount, vehicle charger battery with 12hrs storage capacity
             </p>
           </div>
@@ -133,7 +161,7 @@ export default function FastMarquee({ type }) {
     case "lineIU":
       return (
         <Marquee speed="50" gradient={false} className="mt-12 mb-24">
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 box-content">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={lineIU1}
@@ -141,12 +169,12 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               SmartPro 230V 1.5kVA 900W Line-Interactive UPS, Tower, LCD, USB, 8
               Outlets
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={lineIU2}
@@ -154,12 +182,12 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               1500VA 900W Line-Interactive UPS - 8 C13 Outlets, AVR, 230V, 50/60
               Hz, USB, DB9, LCD, 2U Rack/Tower
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5 ">
             <Image
               placeholder="blur"
               src={lineIU3}
@@ -167,12 +195,12 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               SmartPro 230V 1.5kVA 940W Line-Interactive UPS, Tower, DB9, 6
               Outlets
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5 ">
             <Image
               placeholder="blur"
               src={lineIU4}
@@ -180,11 +208,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               OmniVS 230V 800VA 475W Line-Interactive UPS, USB port, C13 Outlets
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5 ">
             <Image
               placeholder="blur"
               src={lineIU5}
@@ -192,12 +220,12 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               OmniVS 230V 1500VA 940W Line-Interactive UPS, Extended Run, Tower,
               USB port, C13 Outlets
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5 ">
             <Image
               placeholder="blur"
               src={lineIU6}
@@ -205,7 +233,7 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               SmartPro 230V 1500VA 1350W Line-Interactive Sine Wave UPS, 2U,
               Extended Run, WEBCARDLX, LCD, USB, DB9
             </p>
@@ -215,7 +243,7 @@ export default function FastMarquee({ type }) {
     case "onlineU":
       return (
         <Marquee speed="70" gradient={false} className="mt-12 mb-24">
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 box-contentlg:mx-5">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={ou1}
@@ -223,12 +251,12 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               SmartOnline Double-Conversion UPS - 2U, USB, DB9, 230V, 3kVA,
               2.5kW, On-Line
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointerlg:mx-5">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={ou2}
@@ -236,12 +264,12 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               SmartOnline SVTX Series 3-Phase 380/400/415V 20kVA 18kW On-Line
               Double-Conversion UPS, Tower, Extended Run, SNMP Option
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer lg:mx-5">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={ou3}
@@ -249,12 +277,12 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               SmartOnline S3MX Series 3-Phase 380/400/415V 120kVA 108kW On-Line
               Double-Conversion UPS
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer lg:mx-5">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={ou4}
@@ -262,13 +290,13 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               SmartOnline SUTX Series 3-Phase 220/380V, 230/400V, 240/415V 20kVA
               20kW On-Line Double-Conversion UPS, Tower, Extended Run, SNMP
               Option
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer lg:mx-5">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={ou5}
@@ -276,13 +304,13 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               SmartOnline 200-240V 10kVA 7kW Online, Double-Conversion UPS, 6U
               Rack/Tower, Extended Run, Pre-installed SNMP port, RS232, 3 Phase
               in-Single Phase out
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer lg:mx-5">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={ou6}
@@ -290,7 +318,7 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               SmartOnline 200-240V 20kVA 18kW Double-Conversion UPS, N+1, 12U,
               Network Card Slot, USB, DB9, Bypass Switch, C19
             </p>
@@ -300,7 +328,7 @@ export default function FastMarquee({ type }) {
     case "powInv":
       return (
         <Marquee speed="80" gradient={false} className="mt-12 mb-24">
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 box-content">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={pi1}
@@ -308,12 +336,12 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               1250W APS X Series 12VDC 230V Inverter/Charger with Auto Transfer
               Switching, 2 C13 Outlets
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={pi2}
@@ -321,12 +349,12 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               2000W APS INT Series 12VDC 230V Inverter/Charger with Auto
               Transfer Switching, Hardwired
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer  bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={pi3}
@@ -334,12 +362,12 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               3000W APS X Series 24VDC 230V Inverter/Charger with Pure Sine-Wave
               Output, Hardwired
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer  bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={pi4}
@@ -347,12 +375,12 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               6000W APS X Series 48VDC 208/230V Inverter/Charger with Pure
               Sine-Wave Output, AVR, Hardwired
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer  bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={pi5}
@@ -360,12 +388,12 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               Remote Control Module for Tripp Lite PowerVerter Inverters and
               Inverter/Chargers
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer  bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={pi6}
@@ -373,7 +401,7 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:transparent lg:mx-10"
             />
-            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               150W Power Inverter/Charger for Mobile Medical Equipment, 230V -
               IEC 60601-1
             </p>
@@ -383,7 +411,7 @@ export default function FastMarquee({ type }) {
     case "soli":
       return (
         <Marquee speed="80" gradient={false} className="mt-12 mb-24">
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 box-content">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={sl1}
@@ -391,11 +419,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mr-8 lg:ml-8"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               SG1230W Series Solar Lighting System
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={sl2}
@@ -403,11 +431,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mr-8 lg:ml-8"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               SG1220W Series Solar Lighting System
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5 ">
             <Image
               placeholder="blur"
               src={sl3}
@@ -415,11 +443,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mr-8 lg:ml-8"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               SG1210W Series Solar Lighting System
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer  bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={sl4}
@@ -427,11 +455,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mr-8 lg:ml-8"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               SG0603W Series Solar Lighting System
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5 ">
             <Image
               placeholder="blur"
               src={sl5}
@@ -439,11 +467,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mr-8 lg:ml-8"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               Mini ground lighting system
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer  bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={sl6}
@@ -451,7 +479,7 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mr-8 lg:ml-8"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               Mounted Grid Lighting system
             </p>
           </div>
@@ -460,7 +488,7 @@ export default function FastMarquee({ type }) {
     case "socc":
       return (
         <Marquee speed="80" gradient={false} className="mt-12 mb-24">
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 box-content">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={scc1}
@@ -468,11 +496,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:ml-5 lg:mr-5"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               PC1800A Series MPPT Solar Charge Controller (60A/80A)
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={scc2}
@@ -480,11 +508,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:ml-5 lg:mr-5"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               PC1800F Series MPPT Solar Charge Controller (60/80/100A)
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer  bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={scc3}
@@ -492,11 +520,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:ml-5 lg:mr-5"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               PC1500B TK Series PWM Solar Charge Controller (40-60A)
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer  bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={scc4}
@@ -504,11 +532,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:ml-5 lg:mr-5"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               PC1500A SK Series PWM Solar Charge Controller (70-80A)
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer  bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={scc5}
@@ -516,11 +544,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:ml-5 lg:mr-5"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               PC1600A Series MPPT Solar Charge Controller (20-40A)
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer  bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={scc6}
@@ -528,7 +556,7 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:ml-5 lg:mr-5"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               MUST Solar Charge Controller PC1600 with MPPT Technology
             </p>
           </div>
@@ -537,7 +565,7 @@ export default function FastMarquee({ type }) {
     case "soInv":
       return (
         <Marquee speed="80" gradient={false} className="mt-12 mb-24">
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 box-content">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={si1}
@@ -545,12 +573,12 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mr-5 lg:ml-5"
             />
-            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               High Frequency Off Grid Solar Inverter PV1800 LHM Series (AC:120V
               1-3KW)
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={si2}
@@ -558,11 +586,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mr-5 lg:ml-5"
             />
-            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               Mid Frequency Mobile Solar Inverter
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer  bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={si3}
@@ -570,11 +598,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mr-5 lg:ml-5"
             />
-            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               High Frequency Off Grid Solar Inverter PV1800 VM Series (2.5/3KVA)
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer  bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={si4}
@@ -582,11 +610,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mr-5 lg:ml-5"
             />
-            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               High Frequency Rack-mount Solar Inverter PV5000 Series (3-5KW)
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer  bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={si5}
@@ -594,12 +622,12 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mr-5 lg:ml-5"
             />
-            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               High Frequency Off Grid Solar Inverter PV1800 Pro Series(PV:450V
               3/5.2KW)
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer  bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={si6}
@@ -607,7 +635,7 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mr-5 lg:ml-5"
             />
-            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-96 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               Hybrid Solar Inverter PV1800 Series (8-10KW)
             </p>
           </div>
@@ -616,7 +644,7 @@ export default function FastMarquee({ type }) {
     case "sopan":
       return (
         <Marquee speed="80" gradient={false} className="mt-12 mb-24">
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 box-content">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={sp1}
@@ -624,11 +652,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mr-5 lg:ml-5"
             />
-            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               Mono-crystalline Silicon Solar Panel SM300W
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={sp2}
@@ -636,11 +664,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mr-5 lg:ml-5"
             />
-            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               Mono-crystalline Silicon Solar Panel SM250W
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer  bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={sp3}
@@ -648,11 +676,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mr-5 lg:ml-5"
             />
-            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               Mono-crystalline Silicon Solar Panel SM200W
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer  bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={sp4}
@@ -660,11 +688,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mr-5 lg:ml-5"
             />
-            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               Mono-crystalline Silicon Solar Panel SM150W
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer ">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer  bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={sp5}
@@ -672,11 +700,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mr-5 lg:ml-5"
             />
-            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               Poly-crystalline Silicon Solar Panel SP300W
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer lg:ml-5 lg:mr-5">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer  bg-transparent shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={sp6}
@@ -684,7 +712,7 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-full bg-clip-padding bg-transparent lg:mr-5 lg:ml-5"
             />
-            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-72 text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               Poly-crystalline Silicon Solar Panel SP250W
             </p>
           </div>
@@ -693,7 +721,7 @@ export default function FastMarquee({ type }) {
     case "sops":
       return (
         <Marquee speed="80" gradient={false} className="mt-12 mb-24">
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 box-content lg:ml-5 lg:mr-5">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={sps1}
@@ -701,11 +729,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-3xl bg-clip-padding bg-transparent"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               12KW Solar Power System
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer lg:ml-5 lg:mr-5">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer  bg-transparent shadow-lg lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={sps2}
@@ -713,11 +741,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-3xl bg-clip-padding bg-transparent"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               10KW Solar Power System
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer lg:ml-5 lg:mr-5">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={sps3}
@@ -725,11 +753,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-3xl bg-clip-padding bg-transparent"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               6KW Solar Power System
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer lg:ml-5 lg:mr-5">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={sps4}
@@ -737,11 +765,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-3xl bg-clip-padding bg-transparent"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               5KW Solar Power System
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer  lg:ml-5 lg:mr-5">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={sps5}
@@ -749,11 +777,11 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-3xl bg-clip-padding bg-transparent"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               4KW Solar Power System
             </p>
           </div>
-          <div className=" flex flex-col justify-center items-center hover:cursor-pointer lg:ml-5 lg:mr-5">
+          <div className=" flex flex-col justify-center items-center hover:cursor-pointer bg-transparent shadow-lg lg:ml-5 lg:mr-5">
             <Image
               placeholder="blur"
               src={sps6}
@@ -761,11 +789,25 @@ export default function FastMarquee({ type }) {
               height={300}
               className="shadow-lg rounded-3xl bg-clip-padding bg-transparent"
             />
-            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60">
+            <p className="text-lg h-36 w-full text-center text-white flex flex-col items-center justify-center bg-gray-600 shadow-lg sm:rounded-3xl sm:rounded-t-none bg-clip-padding bg-opacity-60 lg:ml-5 lg:mr-5">
               1KW Solar Power System
             </p>
           </div>
         </Marquee>
       );
   }
+  // marqueeData.map((item, index) => {
+  //   return (
+  //     <Marquee
+  //       key={index}
+  //       speed="80"
+  //       gradient={false}
+  //       className="mt-12 mb-24 bg-transparent"
+  //     >
+  //       {item.models.map((model, key) => {
+  //         return <h1 key={key}>{model.name}</h1>;
+  //       })}
+  //     </Marquee>
+  //   );
+  // });
 }

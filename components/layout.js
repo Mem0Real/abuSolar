@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import Navbar from "./navbar";
-import Footer from "./footer";
+import Navbar from "../navigation/Navbar";
+import Footer from "../navigation/f2";
 
 export default function Layout({ children }) {
+  const [width, height] = useDeviceSize();
+
   return (
     <>
       <Head>
@@ -14,12 +16,32 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        <Navbar />
+        <Navbar width={width} height={height} />
       </header>
       <main>{children}</main>
       <footer>
-        <Footer />
+        <Footer width={width} height={height} />
       </footer>
     </>
   );
 }
+
+const useDeviceSize = () => {
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
+
+  const handleWindowResize = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  };
+
+  useEffect(() => {
+    // component is mounted and window is available
+    handleWindowResize();
+    window.addEventListener("resize", handleWindowResize);
+    // unsubscribe from the event on component unmount
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+
+  return [width, height];
+};
