@@ -15,6 +15,7 @@
     "@headlessui/react": "^1.7.7",
     "@mui/material": "^5.11.1",
     "@next/font": "13.0.7",
+    "@popperjs/core": "2.9.1",
     "animate.css": "^4.1.1",
     "d3-ease": "^3.0.1",
     "eslint": "^8.30.0",

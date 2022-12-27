@@ -1,5 +1,4 @@
 import Layout from "../components/layout";
-import FastMarquee from "../components/marquee";
 import Link from "next/link";
 
 export default function Home() {

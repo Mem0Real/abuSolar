@@ -2,9 +2,14 @@ import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Navbar from "../navigation/Navbar";
-import Footer from "../navigation/f2";
+import Footer from "../navigation/Footer";
 
 export default function Layout({ children }) {
+  // Navigate to the top on button click
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const [width, height] = useDeviceSize();
 
   return (
@@ -20,6 +25,29 @@ export default function Layout({ children }) {
       </header>
       <main>{children}</main>
       <footer>
+        <button
+          className="fixed bottom-16 right-7 hover:outline hover:outline-blue-700 rounded-full"
+          onClick={() => {
+            scrollToTop();
+          }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="53"
+            height="53"
+            fill="currentColor"
+            className="bi bi-arrow-up-circle"
+            viewBox="0 0 16 16"
+            id="IconChangeColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"
+              id="mainIconPathAttribute"
+              fill="#03989e"
+            ></path>{" "}
+          </svg>
+        </button>
         <Footer width={width} height={height} />
       </footer>
     </>

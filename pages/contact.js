@@ -19,10 +19,10 @@ const contact = () => {
 
   return (
     <Layout>
-      <section className="text-gray-400 bg-gray-900 body-font">
-        <div className="bg-white flex flex-col justify-center items-center sticky mx-auto">
+      <section className="text-gray-400 bg-gray-900 body-font ">
+        <div className="bg-black flex flex-col justify-center items-center sticky mx-auto">
           <button
-            className="bg-black px-4 py-3 hover:bg-stone-900 mt-16 rounded-lg text-white text-md z-50"
+            className="border px-4 py-3 hover:bg-stone-900 rounded-lg text-white text-md z-50"
             onClick={handleOpen}
           >
             Contact Us
@@ -51,7 +51,7 @@ const contact = () => {
         >
           <Box
             sx={style}
-            className="rounded-3xl justify-center items-center absolute top-28 right-0 lg:mr-6 h-fit w-96 text-black text-center"
+            className="rounded-3xl justify-center items-center absolute top-32 right-0 h-fit w-96 text-black text-center"
           >
             <Typography
               id="modal-modal-title"

@@ -93,8 +93,8 @@ const Nuka = ({ name }) => {
               src={battery1}
               alt={`${name} image`}
               className="object-cover h-80 w-full"
-              width={1000}
-              height={1000}
+              width={500}
+              height={500}
             />
             <Image
               src={battery2}
